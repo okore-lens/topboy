@@ -1,0 +1,24 @@
+.NationCard {
+  min-width: 640px;
+  //   max-width: 655px;
+  max-height: 590px;
+  background-color: #5e3c0b;
+  padding: 1%;
+  border-top: 5px solid #1111115d;
+  border-left: 3px solid #1111115d;
+  border-right: 3px solid #1111115d;
+  //   border-radius: 5px;
+  h3 {
+    // margin-top: 5%;
+  }
+  .media-links {
+    font-size: 24px;
+    .icon {
+      color: #ffffff;
+      margin: 12px;
+      &:hover {
+        color: #f5dc52;
+      }
+    }
+  }
+}

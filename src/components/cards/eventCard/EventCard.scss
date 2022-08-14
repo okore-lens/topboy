@@ -1,0 +1,54 @@
+.EventCard {
+  width: 1371px;
+  height: 450px;
+  background-color: #8e642660;
+  margin: 30px auto;
+  display: flex;
+  padding: 10px;
+  .date {
+    width: 30%;
+    height: 100%;
+    margin: 10px;
+    position: relative;
+    .wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .day {
+        font-size: 24px;
+      }
+      .month {
+        font-size: 48px;
+      }
+    }
+  }
+  .details {
+    width: 70%;
+    height: 100%;
+    margin: 10px;
+    position: relative;
+    .wrapper {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      width: 100%;
+      h3 {
+        font-size: 36px;
+      }
+      .icons {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+          text-decoration: none;
+          color: #ffffff;
+          margin: 0 100px;
+        }
+      }
+    }
+  }
+}

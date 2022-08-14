@@ -1,0 +1,27 @@
+.ServicesCard {
+  width: 1660px;
+  height: 750px;
+  background-color: #8e6526;
+  margin: 30px auto;
+  border-radius: 30px;
+  padding: 20px;
+  h3 {
+    color: #000000;
+  }
+  p {
+    text-align: start;
+    font-size: 20px;
+    width: 1540px;
+    margin: 0 auto;
+  }
+  .img-row {
+    width: 1540px;
+    height: 264px;
+    background-color: #ffffff54;
+    margin: 20px auto 0 auto;
+    border-radius: 15px;
+    display: flex;
+    color: #000000;
+    overflow-x: scroll;
+  }
+}

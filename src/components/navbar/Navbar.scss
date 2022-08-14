@@ -11,6 +11,7 @@
 
   .container {
     position: fixed;
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0);
     height: 77px;
@@ -23,6 +24,12 @@
       a {
         text-decoration: none;
         color: #ffffff;
+        // .logo {
+        //   width: 30px;
+        //   height: 30px;
+        //   background-image: url("../../assets/images/topboy-logo.png");
+        //   background-position: center center;
+        // }
       }
     }
     .right {

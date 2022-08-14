@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.png";
+
 import "./Navbar.scss";
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 1000) {
+    if (window.scrollY >= 100) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -23,7 +25,12 @@ function Navbar() {
     <div className={`Navbar `}>
       <div className={`container ${navbar ? "active" : ""}`}>
         <div className="left">
-          <Link to="/">BrandName</Link>
+          <Link to="/">
+            TopBoy
+            {/* <div className="logo">
+              <img src={logo} />
+            </div> */}
+          </Link>
         </div>
         <div className="right">
           <span className="nav-links">

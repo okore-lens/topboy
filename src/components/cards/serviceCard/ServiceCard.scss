@@ -1,0 +1,31 @@
+.ServiceCard {
+  width: 286px;
+  height: 305px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  margin: 0 0 0 18px;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .wrapper {
+    flex-direction: column;
+    .arrow {
+      display: none;
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #cea1a1;
+    .wrapper {
+      .arrow {
+        display: block;
+      }
+    }
+  }
+}

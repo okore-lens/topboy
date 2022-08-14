@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 function Navbar() {
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 1000) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
+  // `banner ${active ? "active" : ""}`
   return (
-    <div className="Navbar">
-      <div className="container">
+    <div className={`Navbar `}>
+      <div className={`container ${navbar ? "active" : ""}`}>
         <div className="left">
           <Link to="/">BrandName</Link>
         </div>

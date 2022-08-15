@@ -1,6 +1,7 @@
 .ServicesCard {
-  width: 1660px;
-  height: 750px;
+  // width: 1660px;
+  width: 70%;
+  // height: 750px;
   background-color: #8e6526;
   margin: 30px auto;
   border-radius: 30px;
@@ -11,17 +12,27 @@
   p {
     text-align: start;
     font-size: 20px;
-    width: 1540px;
+    // width: 1540px;
+    width: 90%;
     margin: 0 auto;
   }
   .img-row {
-    width: 1540px;
-    height: 264px;
+    // width: 1540px;
+    width: 90%;
+    // height: 264px;
     background-color: #ffffff54;
     margin: 20px auto 0 auto;
     border-radius: 15px;
     display: flex;
     color: #000000;
     overflow-x: scroll;
+  }
+}
+
+@media screen and (max-width: 1560px) {
+  .ServicesCard {
+    p {
+      font-size: 14px;
+    }
   }
 }

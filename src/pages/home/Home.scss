@@ -28,6 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: scroll;
     .icon {
       width: 213px;
       height: 128px;
@@ -77,9 +78,9 @@
   }
   .help {
     margin: 130px 0;
+    // width: 1660px;
     .services {
-      // width: 70%;
-      width: 1660px;
+      width: 70%;
       height: 841px;
       margin: 0 auto;
       background-image: url("../../assets/images/service-img.png");
@@ -104,7 +105,9 @@
           left: 50%;
           transform: translate(-50%, 0%);
           overflow: hidden;
+          width: 100%;
           .wrapper {
+            width: 100%;
             display: flex;
             margin: 0 auto;
           }
@@ -173,6 +176,37 @@
                 background-color: #dbb327;
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1560px) {
+  .Home {
+    .about {
+      width: 75%;
+      margin: 0 auto;
+      .info {
+        width: 65%;
+        height: 600px;
+        background-color: #f2f2f270;
+        border-radius: 30px;
+        text-align: start;
+        padding: 2%;
+        .text {
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .help {
+      .services {
+        .cover {
+          .text {
+            font-size: 48px;
           }
         }
       }

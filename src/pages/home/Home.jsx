@@ -133,11 +133,11 @@ function Home() {
             <span className="text">HOW CAN WE HELP ?</span>
             <div className="services-row">
               <div className="wrapper">
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
+                <ServiceCard className="service-card" />
+                <ServiceCard className="service-card" />
+                <ServiceCard className="service-card" />
+                <ServiceCard className="service-card" />
+                <ServiceCard className="service-card" />
               </div>
             </div>
           </div>

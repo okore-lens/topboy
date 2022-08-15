@@ -1,5 +1,6 @@
 import React from "react";
 import ServicesImgCard from "../servicesImgCard/ServicesImgCard";
+import imagelist from "../../../assets/arrays/memoryArray";
 
 import "./ServicesCard.scss";
 
@@ -49,11 +50,11 @@ function ServicesCard() {
         amet, consectetur adipiscing elit.
       </p>
       <div className="img-row">
-        <ServicesImgCard />
-        <ServicesImgCard />
-        <ServicesImgCard />
-        <ServicesImgCard />
-        <ServicesImgCard />
+        {imagelist.map((img) => (
+          <div key={img.id} className="image">
+            <ServicesImgCard image={img.src} />
+          </div>
+        ))}
       </div>
     </div>
   );

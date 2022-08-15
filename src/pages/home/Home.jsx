@@ -14,6 +14,7 @@ import ServiceCard from "../../components/cards/serviceCard/ServiceCard";
 
 import "./Home.scss";
 import { useState } from "react";
+import nationList from "../../assets/arrays/nationArray";
 
 function Home() {
   const [formInputs, setFormInputs] = useState({
@@ -58,13 +59,14 @@ function Home() {
         <FontAwesomeIcon className="icon" icon={faCcMastercard} />
       </div>
       <div className="nation">
-        <NationCard />
-        <NationCard />
-        <NationCard />
-        <NationCard />
+        {nationList.map((nation) => (
+          <div key={nation.id} className="nation-item">
+            <NationCard name={nation.name} imgSrc={nation.imgSrc} />
+          </div>
+        ))}
       </div>
+      <h2>WHO ARE WE ?</h2>
       <div className="about">
-        <h2>WHO ARE WE ?</h2>
         <div className="twitter">
           <Timeline
             dataSource={{
@@ -73,7 +75,7 @@ function Home() {
             }}
             options={{
               height: "550px",
-              theme: "grey",
+              theme: "dark",
             }}
             renderError={(_err) => <p>Could not load timeline</p>}
           />

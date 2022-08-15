@@ -1,4 +1,3 @@
-import img from "../../../assets/images/nation.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -10,12 +9,13 @@ import {
 
 import "./NationCard.scss";
 
-function NationCard() {
+function NationCard(props) {
+  console.log(props);
   return (
     <div className="NationCard">
-      <h3>Title</h3>
+      <h3>{props.name}</h3>
       <div>
-        <img src={img} alt="nation image" />
+        <img src={props.imgSrc} alt="nation image" />
       </div>
       <div className="media-links">
         <a href="#">

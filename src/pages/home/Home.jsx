@@ -13,10 +13,11 @@ import { send } from "emailjs-com";
 import ServiceCard from "../../components/cards/serviceCard/ServiceCard";
 
 import "./Home.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import nationList from "../../assets/arrays/nationArray";
 
 function Home() {
+  const [active, setActive] = useState(true);
   const [formInputs, setFormInputs] = useState({
     from_name: "",
     message: "",
@@ -41,6 +42,12 @@ function Home() {
     setFormInputs({ from_name: "", message: "", reply_to: "" });
   };
 
+  const interval = () => setInterval(() => setActive(!active), 20000);
+
+  useEffect(() => {
+    interval();
+  });
+
   return (
     <div className="Home">
       <div className="hero">
@@ -52,11 +59,26 @@ function Home() {
         </div>
       </div>
       <div className="brands">
-        <FontAwesomeIcon className="icon" icon={faGooglePay} />
-        <FontAwesomeIcon className="icon" icon={faCcVisa} />
-        <FontAwesomeIcon className="icon" icon={faApplePay} />
-        <FontAwesomeIcon className="icon" icon={faCcPaypal} />
-        <FontAwesomeIcon className="icon" icon={faCcMastercard} />
+        <FontAwesomeIcon
+          className={`icon   ${active ? "active" : ""}`}
+          icon={faGooglePay}
+        />
+        <FontAwesomeIcon
+          className={`icon   ${active ? "active" : ""}`}
+          icon={faCcVisa}
+        />
+        <FontAwesomeIcon
+          className={`icon   ${active ? "active" : ""}`}
+          icon={faApplePay}
+        />
+        <FontAwesomeIcon
+          className={`icon   ${active ? "active" : ""}`}
+          icon={faCcPaypal}
+        />
+        <FontAwesomeIcon
+          className={`icon   ${active ? "active" : ""}`}
+          icon={faCcMastercard}
+        />
       </div>
       <div className="nation">
         {nationList.map((nation) => (

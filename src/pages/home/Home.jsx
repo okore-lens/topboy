@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGooglePay,
@@ -12,10 +13,11 @@ import aboutImg from "../../assets/images/about-img.png";
 import { send } from "emailjs-com";
 import ServiceCard from "../../components/cards/serviceCard/ServiceCard";
 
-import "./Home.scss";
 import { useEffect, useState } from "react";
 import nationList from "../../assets/arrays/nationArray";
 import serviceArray from "../../assets/arrays/serviceArray";
+
+import "./Home.scss";
 
 function Home() {
   const [active, setActive] = useState(true);
@@ -33,11 +35,9 @@ function Home() {
     event.preventDefault();
     send("service_yyeki9b", "template_ioz6ifx", formInputs, "yySSC3OYij-nR0TpB")
       .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
         alert("Message sent successfully");
       })
       .catch((err) => {
-        console.log("FAILED...", err);
         alert("Message not sent");
       });
     setFormInputs({ from_name: "", message: "", reply_to: "" });
@@ -159,7 +159,15 @@ function Home() {
             <div className="services-row">
               <div className="wrapper">
                 {serviceArray.map((service) => (
-                  <ServiceCard name={service.title} className="service-card" />
+                  <Link
+                    key={service.id}
+                    to={{ pathname: "/services", hash: `${service.id}` }}
+                  >
+                    <ServiceCard
+                      name={service.title}
+                      className="service-card"
+                    />
+                  </Link>
                 ))}
               </div>
             </div>

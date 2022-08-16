@@ -1,39 +1,46 @@
 .Merch {
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   background-image: url("../../assets/images/video-bg.png");
   background-position: center center;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-
-  h2 {
-    position: absolute;
-    top: 8%;
-    color: #a56113;
-  }
-  .content {
-    margin: 100px;
-    height: 70%;
+  .wrapper {
+    position: relative;
     width: 100%;
-    .merch-row {
-      margin: 0 auto;
-      background-color: #a8969681;
-      height: 100%;
-      //   height: max-content;
-      width: 100%;
-      position: relative;
-      .wrapper {
+    height: 100%;
+    background-color: #5f5a5448;
+    h2 {
+      position: absolute;
+      top: 8%;
+      left: 50%;
+      transform: translate(-50%, -8%);
+      color: #a56113;
+    }
+    .content {
+      margin: 120px;
+      height: 70%;
+      width: 85%;
+      .merch-row {
+        margin: 0 auto;
+        background-color: #a8969681;
+        box-shadow: 0 0 10px 8px #323232;
         height: 100%;
-        display: grid;
-        grid-template-columns: auto auto;
-        overflow-y: scroll;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        //   height: max-content;
+        width: 100%;
+        position: relative;
+        .wrapper {
+          height: 100%;
+          display: grid;
+          grid-template-columns: auto auto;
+          overflow-y: scroll;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
     }
   }

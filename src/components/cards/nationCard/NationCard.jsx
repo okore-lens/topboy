@@ -10,7 +10,6 @@ import {
 import "./NationCard.scss";
 
 function NationCard(props) {
-  console.log(props);
   return (
     <div className="NationCard">
       <h3>{props.name}</h3>

@@ -9,8 +9,12 @@ function Services() {
     <div className="Services">
       <h3>SERVICES WE OFFER</h3>
       {serviceArray.map((service) => (
-        // console.log(service.title);
-        <ServicesCard title={service.title} description={service.description} />
+        <div key={service.id} id={`${service.id}`}>
+          <ServicesCard
+            title={service.title}
+            description={service.description}
+          />
+        </div>
       ))}
     </div>
   );

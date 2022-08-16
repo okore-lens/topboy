@@ -1,16 +1,15 @@
 import React from "react";
-import image from "../../../assets/images/merch.png";
 
 import "./MerchCard.scss";
 
-function MerchCard() {
+function MerchCard(props) {
   return (
     <div className="MerchCard">
-      <h3>Title</h3>
+      <h4>{props.title}</h4>
       <div className="image">
-        <img src={image} />
+        <img src={props.imgSrc} />
       </div>
-      <p>Price</p>
+      <p>KShs. {props.price}</p>
     </div>
   );
 }

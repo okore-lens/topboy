@@ -4,14 +4,14 @@ import arrow from "../../../assets/images/icon-arrow-right.png";
 
 import "./ServiceCard.scss";
 
-function ServiceCard() {
+function ServiceCard(props) {
   return (
     <div className="ServiceCard">
       <div className="wrapper">
         <div className="image">
           <img src={icon} />
         </div>
-        <h3>Service Offered</h3>
+        <h3>{props.name}</h3>
         <div className="arrow">
           <img src={arrow} />
         </div>

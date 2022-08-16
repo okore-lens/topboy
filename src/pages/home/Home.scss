@@ -67,11 +67,14 @@
     margin: 0 auto;
     background-color: #f2f2f270;
     border-radius: 30px;
+    // height: 700px;
+    padding: 2%;
+
     .info {
       width: 70%;
+      background-color: #f2f2f270;
       height: 600px;
       text-align: start;
-      padding: 2%;
       .img {
         float: right;
       }
@@ -100,7 +103,8 @@
     // width: 1660px;
     .services {
       width: 70%;
-      height: 841px;
+      height: 700px;
+      // height: 841px;
       margin: 0 auto;
       background-image: url("../../assets/images/service-img.png");
       background-position: center center;
@@ -265,8 +269,8 @@
       margin: 0 auto;
       .info {
         width: 65%;
-        height: 600px;
-        background-color: #f2f2f270;
+        height: 620px;
+        // background-color: #f2f2f270;
         border-radius: 30px;
         text-align: start;
         padding: 2%;

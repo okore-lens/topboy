@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
 
 import "./Navbar.scss";
 
@@ -8,7 +7,7 @@ function Navbar() {
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 50) {
+    if (window.scrollY >= 100) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -17,20 +16,13 @@ function Navbar() {
 
   useEffect(() => {
     changeBackground();
-    // adding the event when scroll change background
     window.addEventListener("scroll", changeBackground);
   });
-  // `banner ${active ? "active" : ""}`
   return (
     <div className={`Navbar `}>
       <div className={`container ${navbar ? "active" : ""}`}>
         <div className="left">
-          <Link to="/">
-            TopBoy
-            {/* <div className="logo">
-              <img src={logo} />
-            </div> */}
-          </Link>
+          <Link to="/">TopBoy</Link>
         </div>
         <div className="right">
           <span className="nav-links">

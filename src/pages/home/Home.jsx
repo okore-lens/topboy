@@ -15,6 +15,7 @@ import ServiceCard from "../../components/cards/serviceCard/ServiceCard";
 import "./Home.scss";
 import { useEffect, useState } from "react";
 import nationList from "../../assets/arrays/nationArray";
+import serviceArray from "../../assets/arrays/serviceArray";
 
 function Home() {
   const [active, setActive] = useState(true);
@@ -157,11 +158,9 @@ function Home() {
             <span className="text">HOW CAN WE HELP ?</span>
             <div className="services-row">
               <div className="wrapper">
-                <ServiceCard className="service-card" />
-                <ServiceCard className="service-card" />
-                <ServiceCard className="service-card" />
-                <ServiceCard className="service-card" />
-                <ServiceCard className="service-card" />
+                {serviceArray.map((service) => (
+                  <ServiceCard name={service.title} className="service-card" />
+                ))}
               </div>
             </div>
           </div>

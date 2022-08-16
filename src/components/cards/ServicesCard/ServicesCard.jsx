@@ -1,59 +1,20 @@
 import React from "react";
 import ServicesImgCard from "../servicesImgCard/ServicesImgCard";
+import image from "../../../assets/images/services-img.png";
+import imageArray from "../../../assets/arrays/serviceImgArray";
 
 import "./ServicesCard.scss";
 
-function ServicesCard() {
+function ServicesCard(props) {
+  console.log(props);
   return (
     <div className="ServicesCard">
-      <h3>SERVICE OFFERED</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna ali.orem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali.
-        orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna ali.orem ipsum dolor sit
-        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna ali et, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna ali incididunt ut
-        labore et dolore magna ali. orem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna ali.orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna ali et, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna ali.
-        <br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna ali.orem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali.
-        orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna ali.orem ipsum dolor sit
-        amet, consectetur adipiscing elit.
-      </p>
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
       <div className="img-row">
-        <ServicesImgCard />
-        <ServicesImgCard />
-        <ServicesImgCard />
-        <ServicesImgCard />
-        <ServicesImgCard />
+        {imageArray.map((img) => (
+          <ServicesImgCard image={img} />
+        ))}
       </div>
     </div>
   );

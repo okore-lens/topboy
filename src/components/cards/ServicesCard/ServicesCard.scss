@@ -18,12 +18,13 @@
   }
   .img-row {
     // width: 1540px;
-    width: 90%;
+    // min-width: 90%;
     // height: 264px;
     background-color: #ffffff54;
     margin: 20px auto 0 auto;
     border-radius: 15px;
     display: flex;
+    justify-content: space-around;
     color: #000000;
     overflow-x: scroll;
   }

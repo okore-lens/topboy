@@ -27,7 +27,7 @@ function EventCard() {
             </a>{" "}
             <a href="#">
               <img src={iconShare} />
-              <h4>Ruaka,Nairobi</h4>
+              <h4>Share</h4>
             </a>
           </div>
         </div>

@@ -1,18 +1,15 @@
-// .Footer {
-//   height: 116px;
-//   line-height: 116px;
-// }
-
 .Footer {
   color: #000000;
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 14px;
+  // height: 116px;
+  padding: 5px;
   p {
     margin: 5px 0;
     .text-link {
-      margin: 6px;
+      margin: 0 6px;
     }
   }
 
@@ -26,10 +23,10 @@
   }
 
   .media-links {
-    font-size: 24px;
+    font-size: 20px;
     .icon {
       color: #000000;
-      margin: 12px;
+      margin: 0 12px;
       &:hover {
         color: #f5dc52;
       }

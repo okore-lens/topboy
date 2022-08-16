@@ -1,12 +1,12 @@
 import React from "react";
-import image from "../../../assets/images/services-img.png";
+// import image from "../../../assets/images/services-img.png";
 
 import "./ServicesImgCard.scss";
 
-function ServicesImgCard() {
+function ServicesImgCard(props) {
   return (
     <div className="ServicesImgCard">
-      <img src={image} />
+      <img src={props.image} />
     </div>
   );
 }

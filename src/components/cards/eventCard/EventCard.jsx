@@ -5,7 +5,7 @@ import iconShare from "../../../assets/images/icon-share.png";
 
 import "./EventCard.scss";
 
-function EventCard() {
+function EventCard(props) {
   return (
     <div className="EventCard">
       <div className="date">
@@ -13,17 +13,17 @@ function EventCard() {
           <div className="poster">
             <img src={image} />
           </div>
-          <div className="day">Monday, 27</div>
-          <div className="month">February</div>
+          <div className="day">{props.day}</div>
+          <div className="month">{props.month}</div>
         </div>
       </div>
       <div className="details">
         <div className="wrapper">
-          <h3>TOPBOY NATION GRILL</h3>
+          <h3>{props.venueName}</h3>
           <div className="icons">
             <a href="#">
               <img src={iconLocation} />
-              <h4>Ruaka,Nairobi</h4>
+              <h4>{props.location}</h4>
             </a>{" "}
             <a href="#">
               <img src={iconShare} />

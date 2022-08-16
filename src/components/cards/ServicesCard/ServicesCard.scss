@@ -17,16 +17,21 @@
     margin: 0 auto;
   }
   .img-row {
-    // width: 1540px;
-    // min-width: 90%;
-    // height: 264px;
+    width: 90%;
+    height: 180px;
     background-color: #ffffff54;
     margin: 20px auto 0 auto;
     border-radius: 15px;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
     color: #000000;
     overflow-x: scroll;
+    .image {
+      margin: 8px;
+      // width: 150px;
+      // height: 150px;
+    }
   }
 }
 

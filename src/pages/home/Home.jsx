@@ -97,7 +97,7 @@ function Home() {
               screenName: "_okorelens",
             }}
             options={{
-              height: "550px",
+              height: "550",
               theme: "dark",
             }}
             renderError={(_err) => <p>Could not load timeline</p>}

@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import merchList from "../../assets/arrays/merchArray";
 import MerchCard from "../../components/cards/merchCard/MerchCard";
 
 import "./Merch.scss";
 
 function Merch() {
+  // async function fetchMerch() {
+  //   const response = await fetch("gs://topboy-nation.appspot.com/images");
+  //   console.log(response);
+  // }
+
+  // useEffect(() => {
+  //   fetchMerch();
+  // }, []);
+
   return (
     <div className="Merch">
       <div className="wrapper">

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,14 +8,15 @@ import {
   faCcPaypal,
   faCcVisa,
 } from "@fortawesome/free-brands-svg-icons";
-import NationCard from "../../components/cards/nationCard/NationCard";
 import { Timeline } from "react-twitter-widgets";
-import aboutImg from "../../assets/images/about-img.png";
-import ServiceCard from "../../components/cards/serviceCard/ServiceCard";
-
-import { useEffect, useState } from "react";
-import nationList from "../../assets/arrays/nationArray";
-import serviceArray from "../../assets/arrays/serviceArray";
+//image
+import aboutImg from "../../../../assets/images/about-img.png";
+// cards
+import NationCard from "../../../cards/nationCard/NationCard";
+import ServiceCard from "../../../cards/serviceCard/ServiceCard";
+// arrays
+import nationList from "../../../../assets/arrays/nationArray";
+import serviceArray from "../../../../assets/arrays/serviceArray";
 
 import "./Home.scss";
 import Contact from "../contact/Contact";

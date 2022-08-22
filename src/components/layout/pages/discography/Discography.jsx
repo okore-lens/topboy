@@ -1,6 +1,6 @@
 import React from "react";
-import AudioCard from "../../components/cards/audioCard/AudioCard";
-import VideoCard from "../../components/cards/videoCard/VideoCard";
+import AudioCard from "../../../cards/audioCard/AudioCard";
+import VideoCard from "../../../cards/videoCard/VideoCard";
 
 import "./Discography.scss";
 

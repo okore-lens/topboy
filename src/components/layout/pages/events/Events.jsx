@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import imagelist from "../../assets/arrays/memoryArray";
-import EventCard from "../../components/cards/eventCard/EventCard";
+import imagelist from "../../../../assets/arrays/memoryArray";
+import EventCard from "../../../cards/eventCard/EventCard";
 
 import "./Events.scss";
 

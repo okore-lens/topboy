@@ -1,6 +1,6 @@
 import React from "react";
-import ServicesCard from "../../components/cards/ServicesCard/ServicesCard";
-import serviceArray from "../../assets/arrays/serviceArray";
+import ServicesCard from "../../../cards/ServicesCard/ServicesCard";
+import serviceArray from "../../../../assets/arrays/serviceArray";
 
 import "./Services.scss";
 

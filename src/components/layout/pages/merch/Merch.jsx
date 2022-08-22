@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import merchList from "../../assets/arrays/merchArray";
-import MerchCard from "../../components/cards/merchCard/MerchCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
+import merchList from "../../../../assets/arrays/merchArray";
+import MerchCard from "../../../cards/merchCard/MerchCard";
 
 import "./Merch.scss";
 

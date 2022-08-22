@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
+import Contact from "./pages/contact/Contact";
 import Discography from "./pages/discography/Discography";
 import Events from "./pages/events/Events";
 import Home from "./pages/home/Home";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/discography" element={<Discography />} />
         <Route path="/merch" element={<Merch />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>

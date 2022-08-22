@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import eventList from "../../assets/arrays/eventArray";
 import imagelist from "../../assets/arrays/memoryArray";
 import EventCard from "../../components/cards/eventCard/EventCard";
 

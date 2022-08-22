@@ -1,6 +1,5 @@
 .ServiceCard {
   max-width: 90%;
-  // width: 286px;
   height: 305px;
   background-color: #d9d9d98b;
   border-radius: 10px;
@@ -9,8 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   font-size: 12px;
+  transition: 2s ease-in-out;
   .wrapper {
     flex-direction: column;
     .arrow {
@@ -19,9 +18,12 @@
   }
   &:hover {
     cursor: pointer;
-    background-color: #cea1a1;
+    // background-color: #cea1a1;
+    background-color: #5e3c0b;
     .wrapper {
       .arrow {
+        transform: scale(1.1);
+        // trans
         display: block;
       }
     }

@@ -7,7 +7,7 @@ function Navbar() {
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 40) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -39,6 +39,9 @@ function Navbar() {
           </span>
           <span className="nav-links">
             <Link to="/merch">Merch</Link>
+          </span>
+          <span className="nav-links">
+            <Link to="/contact">Contact Us</Link>
           </span>
         </div>
       </div>

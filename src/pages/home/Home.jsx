@@ -10,7 +10,6 @@ import {
 import NationCard from "../../components/cards/nationCard/NationCard";
 import { Timeline } from "react-twitter-widgets";
 import aboutImg from "../../assets/images/about-img.png";
-import { send } from "emailjs-com";
 import ServiceCard from "../../components/cards/serviceCard/ServiceCard";
 
 import { useEffect, useState } from "react";
@@ -18,30 +17,10 @@ import nationList from "../../assets/arrays/nationArray";
 import serviceArray from "../../assets/arrays/serviceArray";
 
 import "./Home.scss";
+import Contact from "../contact/Contact";
 
 function Home() {
   const [active, setActive] = useState(true);
-  const [formInputs, setFormInputs] = useState({
-    from_name: "",
-    message: "",
-    reply_to: "",
-  });
-
-  const ChangeHandler = (event) => {
-    setFormInputs({ ...formInputs, [event.target.name]: event.target.value });
-  };
-
-  const formHandler = (event) => {
-    event.preventDefault();
-    send("service_yyeki9b", "template_ioz6ifx", formInputs, "yySSC3OYij-nR0TpB")
-      .then((response) => {
-        alert("Message sent successfully");
-      })
-      .catch((err) => {
-        alert("Message not sent");
-      });
-    setFormInputs({ from_name: "", message: "", reply_to: "" });
-  };
 
   const interval = () => setInterval(() => setActive(!active), 20000);
 
@@ -174,44 +153,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="contact">
-        <div className="wrapper">
-          <div className="form-bg">
-            <form>
-              <div>
-                <input
-                  type="text"
-                  name="from_name"
-                  value={formInputs.from_name}
-                  onChange={ChangeHandler}
-                  placeholder="Name"
-                />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  name="reply_to"
-                  value={formInputs.reply_to}
-                  onChange={ChangeHandler}
-                  placeholder="Email"
-                />
-              </div>
-              <div>
-                <textarea
-                  type="text"
-                  name="message"
-                  value={formInputs.message}
-                  onChange={ChangeHandler}
-                  placeholder="Message"
-                />
-              </div>
-              <div>
-                <button onClick={formHandler}>Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+      <Contact />
     </div>
   );
 }

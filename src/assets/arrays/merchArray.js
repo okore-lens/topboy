@@ -39,7 +39,7 @@ const merchList = [
   {
     title: "TopBoy Hoodies",
     imgSrc: imgHoodie,
-    price: 2000,
+    price: 2500,
     id: 6,
   },
 ];

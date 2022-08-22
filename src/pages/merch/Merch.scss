@@ -1,7 +1,7 @@
 .Merch {
   width: 100%;
   height: 100vh;
-  background-image: url("../../assets/images/video-bg.png");
+  // background-image: url("../../assets/images/video-bg.png");
   background-position: center center;
   background-size: cover;
   display: flex;
@@ -17,10 +17,40 @@
       top: 8%;
       left: 50%;
       transform: translate(-50%, -8%);
-      color: #a56113;
+      // color: #a56113;
+    }
+    .cart {
+      position: absolute;
+      top: 13%;
+      left: 90%;
+      transform: translate(-90%, -13%);
+      .icon {
+        padding: 3px 18px;
+        background-color: #282525;
+        border-radius: 3px;
+        width: 50px;
+        height: 30px;
+        color: #e8ba1a;
+        margin: 0 69px;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      .active {
+        -webkit-animation: spin 4s linear infinite;
+        -moz-animation: spin 4s linear infinite;
+        animation: spin 4s linear infinite;
+        &:hover {
+          -moz-animation: none;
+          -webkit-animation: none;
+          animation: none;
+        }
+      }
     }
     .content {
-      margin: 120px;
+      margin: 140px;
       height: 70%;
       width: 85%;
       .merch-row {

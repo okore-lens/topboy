@@ -1,23 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import merchList from "../../assets/arrays/merchArray";
 import MerchCard from "../../components/cards/merchCard/MerchCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 import "./Merch.scss";
 
 function Merch() {
-  // async function fetchMerch() {
-  //   const response = await fetch("gs://topboy-nation.appspot.com/images");
-  //   console.log(response);
-  // }
-
-  // useEffect(() => {
-  //   fetchMerch();
-  // }, []);
-
+  const [active, setActive] = useState(false);
   return (
     <div className="Merch">
       <div className="wrapper">
         <h2>MERCHANDISE</h2>
+        <div className="cart">
+          <FontAwesomeIcon
+            className={`icon   ${active ? "active" : ""}`}
+            icon={faCartArrowDown}
+          />
+        </div>
         {/* <p>Scroll</p> */}
         <div className="content">
           <div className="merch-row">

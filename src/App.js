@@ -8,11 +8,11 @@ import Events from "./components/layout/pages/events/Events";
 import Home from "./components/layout/pages/home/Home";
 import Merch from "./components/layout/pages/merch/Merch";
 import Services from "./components/layout/pages/services/Services";
+import CartProvider from "./store/CartProvider";
 
 function App() {
   return (
-    <div className="App">
-      {/* Hello TopBoy */}
+    <CartProvider className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-    </div>
+    </CartProvider>
   );
 }
 

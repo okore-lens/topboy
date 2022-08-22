@@ -1,7 +1,7 @@
 .Merch {
   width: 100%;
   height: 100vh;
-  // background-image: url("../../assets/images/video-bg.png");
+  background-image: url("../../../../assets/images/video-bg.png");
   background-position: center center;
   background-size: cover;
   display: flex;
@@ -17,13 +17,12 @@
       top: 8%;
       left: 50%;
       transform: translate(-50%, -8%);
-      // color: #a56113;
     }
     .cart {
       position: absolute;
-      top: 10%;
+      top: 12%;
       left: 90%;
-      transform: translate(-90%, -10%);
+      transform: translate(-90%, -12%);
       cursor: pointer;
       font: inherit;
       border: none;
@@ -62,38 +61,15 @@
         }
       }
     }
-    .bump {
-      animation: bump 300ms ease-out;
-    }
-
-    @keyframes bump {
-      0% {
-        transform: scale(1);
-      }
-      10% {
-        transform: scale(0.9);
-      }
-      30% {
-        transform: scale(1.1);
-      }
-      50% {
-        transform: scale(1.15);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
 
     .content {
       margin: 140px;
       height: 70%;
-      width: 85%;
       .merch-row {
         margin: 0 auto;
         background-color: #a8969681;
         box-shadow: 0 0 10px 8px #323232;
         height: 100%;
-        //   height: max-content;
         width: 100%;
         position: relative;
         .wrapper {
@@ -110,3 +86,25 @@
     }
   }
 }
+
+// .bump {
+//   animation: bump 300ms ease-out;
+// }
+
+// @keyframes bump {
+//   0% {
+//     transform: scale(1);
+//   }
+//   10% {
+//     transform: scale(0.9);
+//   }
+//   30% {
+//     transform: scale(1.1);
+//   }
+//   50% {
+//     transform: scale(1.15);
+//   }
+//   100% {
+//     transform: scale(1);
+//   }
+// }

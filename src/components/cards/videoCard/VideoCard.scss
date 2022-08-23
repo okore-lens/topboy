@@ -1,35 +1,6 @@
 .VideoCard {
   width: 75%;
-  height: 523px;
-  background-image: url("../../../assets/images/video-bg.png");
   margin: 30px auto;
   background-position: center center;
   background-size: cover;
-  .wrapper {
-    width: 100%;
-    height: 100%;
-    background-color: #00000062;
-    text-align: start;
-    color: #ffffff;
-    position: relative;
-    h3 {
-      margin: 20px;
-      &:hover {
-        cursor: pointer;
-        color: #a86c11;
-      }
-    }
-    .center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #ebff07;
-      font-size: 40px;
-      &:hover {
-        color: #ffffff;
-        cursor: pointer;
-      }
-    }
-  }
 }

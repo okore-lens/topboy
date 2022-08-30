@@ -9,7 +9,7 @@ function VideoCard(props) {
     <div className="VideoCard">
       <iframe
         width="100%"
-        height="315px"
+        height="500px"
         src={props.src}
         title="YouTube video player"
         frameBorder="0"

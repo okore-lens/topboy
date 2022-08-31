@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../../../assets/images/logo1.png";
+import logo2 from "../../../assets/images/logo2.png";
 
 import "./Navbar.scss";
 
@@ -22,7 +24,11 @@ function Navbar() {
     <div className={`Navbar `}>
       <div className={`container ${navbar ? "active" : ""}`}>
         <div className="left">
-          <Link to="/">TopBoy</Link>
+          <Link to="/">
+            <div className="image">
+              <img src={logo2} />
+            </div>
+          </Link>
         </div>
         <div className="right">
           <span className="nav-links">

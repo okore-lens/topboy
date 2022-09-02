@@ -13,9 +13,9 @@ function NationCard(props) {
   return (
     <div className="NationCard">
       <h3>{props.name}</h3>
-      <div>
-        <img src={props.imgSrc} alt="nation image" />
-      </div>
+
+      <img src={props.imgSrc} alt="nation image" />
+
       <div className="media-links">
         <a href="#">
           <FontAwesomeIcon className="icon" icon={faFacebook} />

@@ -1,13 +1,16 @@
 .NationCard {
   margin: 0 auto;
   width: 500px;
-  min-height: 590px;
-  background-color: #5e3c0b;
-  padding: 1%;
+  height: 400px;
+  background-color: #31210a;
+  // padding: 1%;
   border-top: 5px solid #1111115d;
   border-left: 3px solid #1111115d;
   border-right: 3px solid #1111115d;
-  border-bottom: 3px solid #1111115d;
+  border-bottom: 5px solid #1111115d;
+  img {
+    height: 75%;
+  }
 
   .media-links {
     font-size: 24px;

@@ -13,7 +13,7 @@ const AboutHome = () => {
           }}
           options={{
             height: "550",
-            theme: "dark",
+            // theme: "da",
           }}
           renderError={(_err) => <p>Could not load timeline</p>}
         />
@@ -50,17 +50,8 @@ const AboutHome = () => {
             tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor
             sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna ali.orem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna ali. orem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            ali.orem ipsum dolor sit ipsum dolor sit amet, consectetur
-            adipiscing elit, sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna ali et,
-            consectetur.
+            amet, consectetur adipiscing elit.ncididunt ut labore et dolore
+            magna ali et, consectetur.
           </p>
         </div>
         <button>READ MORE</button>

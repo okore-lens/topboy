@@ -12,7 +12,7 @@ import {
 import NationCard from "../../../cards/nationCard/NationCard";
 // arrays
 import nationList from "../../../../assets/arrays/nationArray";
-// import serviceArray from "../../../../assets/arrays/serviceArray";
+import logo from "../../../../assets/images/logo2.png";
 
 import "./Home.scss";
 import Contact from "../contact/Contact";
@@ -31,35 +31,33 @@ function Home() {
   return (
     <div className="Home">
       <div className="hero">
-        <div className="wrapper">
-          <div className="text">
-            <div>WE BRING THE PARTY </div>
-            <div>TO YOU</div>
-          </div>
+        <div className="hero-img">
+          <img src={logo} />
+        </div>
+        <div className="brands">
+          <FontAwesomeIcon
+            className={`icon   ${active ? "active" : ""}`}
+            icon={faGooglePay}
+          />
+          <FontAwesomeIcon
+            className={`icon   ${active ? "active" : ""}`}
+            icon={faCcVisa}
+          />
+          <FontAwesomeIcon
+            className={`icon   ${active ? "active" : ""}`}
+            icon={faApplePay}
+          />
+          <FontAwesomeIcon
+            className={`icon   ${active ? "active" : ""}`}
+            icon={faCcPaypal}
+          />
+          <FontAwesomeIcon
+            className={`icon   ${active ? "active" : ""}`}
+            icon={faCcMastercard}
+          />
         </div>
       </div>
-      <div className="brands">
-        <FontAwesomeIcon
-          className={`icon   ${active ? "active" : ""}`}
-          icon={faGooglePay}
-        />
-        <FontAwesomeIcon
-          className={`icon   ${active ? "active" : ""}`}
-          icon={faCcVisa}
-        />
-        <FontAwesomeIcon
-          className={`icon   ${active ? "active" : ""}`}
-          icon={faApplePay}
-        />
-        <FontAwesomeIcon
-          className={`icon   ${active ? "active" : ""}`}
-          icon={faCcPaypal}
-        />
-        <FontAwesomeIcon
-          className={`icon   ${active ? "active" : ""}`}
-          icon={faCcMastercard}
-        />
-      </div>
+      <h2>TopBoy Members</h2>
       <div className="nation">
         {nationList.map((nation) => (
           <div key={nation.id} className="nation-item">

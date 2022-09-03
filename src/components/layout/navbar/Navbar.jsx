@@ -24,11 +24,11 @@ function Navbar() {
     <div className={`Navbar `}>
       <div className={`container ${navbar ? "active" : ""}`}>
         <div className="left">
-          <Link to="/">
-            <div className="image">
+          <div className="image">
+            <Link to="/">
               <img src={logo2} />
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
         <div className="right">
           <span className="nav-links">

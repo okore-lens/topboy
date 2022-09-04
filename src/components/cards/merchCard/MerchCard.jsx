@@ -1,19 +1,19 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 
 import "./MerchCard.scss";
 
 function MerchCard(props) {
   const [formInput, setFormInput] = useState(1);
-  // const [prev, setPrev] = useState(0);
-  // const [amount, setAmount] = useState(0);
-
   const changeHandler = (ev) => {
     setFormInput(ev.target.value);
   };
 
   const submitHandler = (ev) => {
     ev.preventDefault();
-    // console.log(`${props.title} has been selected ${formInput} times`);
+    // elementsArray.find(checkElement);
+    let array = props.elements;
+    if (array.includes(props.id)) return;
     props.item(props.id);
     props.clicked(true);
     props.totalAmount(formInput, props.price, props.title);
@@ -28,13 +28,13 @@ function MerchCard(props) {
       </div>
       <form className="cartfunc" onSubmit={submitHandler}>
         <p>KShs. {props.price}</p>
-        <input
+        {/* <input
           value={formInput}
           onChange={changeHandler}
           type="number"
           min="1"
           step="1"
-        />
+        /> */}
         <button>Add to Cart</button>
       </form>
     </div>

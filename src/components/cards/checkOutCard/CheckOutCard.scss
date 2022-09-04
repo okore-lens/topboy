@@ -29,6 +29,12 @@
     input {
       width: 20%;
     }
+    select {
+      // width: 30px;
+      outline: none;
+      cursor: pointer;
+      margin: 5px;
+    }
     button {
       margin: 5px;
       &:hover {

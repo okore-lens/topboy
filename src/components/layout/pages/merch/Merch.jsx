@@ -24,6 +24,7 @@ function Merch() {
   const [selectedItems, setSelectedItems] = useState([]);
   const [proceed, setProceed] = useState(false);
   const [itemToDelete, setItemToDelete] = useState(null);
+  const [elements, setElements] = useState([]);
 
   const clickHandler = () => {
     // console.log("clicked");
@@ -38,8 +39,8 @@ function Merch() {
 
   const totalAmountHandler = (number, price, title) => {
     // console.log(number, price);
-    totalAmount = number * price;
-    setAmount(totalAmount + amount);
+    // totalAmount = number * price;
+    // setAmount(totalAmount + amount);
     setStatus(`${number}  ${title}(s) have been added to the cart `);
     setTimeout(function () {
       setAdd(false);
@@ -72,6 +73,11 @@ function Merch() {
     setSelectedItems([...selectedItems, checkOutForm]);
   }, [checkOutForm]);
 
+  useEffect(() => {
+    setElements([...elements, item]);
+    setAmount(elements.length);
+  }, [item]);
+
   // console.log(prev, item);
 
   return (
@@ -100,6 +106,7 @@ function Merch() {
                   title={merch.title}
                   imgSrc={merch.imgSrc}
                   price={merch.price}
+                  elements={elements}
                 />
               ))}
             </div>
@@ -118,7 +125,7 @@ function Merch() {
                 <tr className="table-heading">
                   <td>Image</td>
                   <td>Name</td>
-                  <td>Amount</td>
+                  <td>Description and Amount</td>
                   <td>Total</td>
                 </tr>
               </thead>

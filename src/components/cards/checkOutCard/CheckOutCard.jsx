@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 
 import "./CheckOutCard.scss";
 
@@ -10,13 +11,18 @@ const CheckOutCard = ({ checkOutForm }) => {
     let totalPrice = ev.target.value * checkOutForm.price;
     setTotal(totalPrice);
   };
+
+  useEffect(() => {
+    setTotal(checkOutForm.price * checkOutForm.number);
+  }, []);
+
   return (
-    <div className="CheckOutCard">
-      <div className="image">
+    <tr className="CheckOutCard">
+      <td className="image">
         <img src={checkOutForm.image} />
-      </div>
-      <div className="description">{checkOutForm.title}</div>
-      <div className="total">
+      </td>
+      <td>{checkOutForm.title}</td>
+      <td className="total">
         <input
           onChange={changeHandler}
           defaultValue={checkOutForm.number}
@@ -24,9 +30,10 @@ const CheckOutCard = ({ checkOutForm }) => {
           step="1"
           min="1"
         />
-      </div>
-      <div className="amount">{total}</div>
-    </div>
+        <span>Remove</span>
+      </td>
+      <td className="amount">{total}</td>
+    </tr>
   );
 };
 

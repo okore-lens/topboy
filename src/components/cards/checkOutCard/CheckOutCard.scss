@@ -1,24 +1,36 @@
 .CheckOutCard {
-  width: 70%;
+  width: 100%;
   height: 80px;
   line-height: 80px;
   background-color: #00000097;
-  margin: 4px auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  margin: 10px auto;
+
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: center;
+  td {
+    // height: 80px;
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
   .image {
-    background-color: aqua;
+    // background-color: aqua;
     width: 30%;
-    height: 80%;
+    height: 80px;
     img {
       width: 100%;
-      height: 100%;
+      // height: 100%;
     }
+  }
+  .description {
+    font-size: 12px;
   }
   .total {
     input {
       width: 20%;
     }
+  }
+  .amount {
+    width: 20%;
   }
 }

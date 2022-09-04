@@ -20,8 +20,8 @@ function Merch() {
     title: "",
     image: null,
   });
-
-  const selectedItems = [1, 2, 3];
+  const [selectedItems, setSelectedItems] = useState([]);
+  const [proceed, setProceed] = useState(false);
 
   const clickHandler = () => {
     // console.log("clicked");
@@ -53,9 +53,12 @@ function Merch() {
     });
   };
 
+  const proceedHandler = () => {
+    setProceed(true);
+  };
+
   useEffect(() => {
-    // selectedItems.push(...selectedItems, checkOutForm);
-    console.log(selectedItems);
+    setSelectedItems([...selectedItems, checkOutForm]);
   }, [checkOutForm]);
 
   // console.log(prev, item);
@@ -99,9 +102,23 @@ function Merch() {
           </div>
           <div className="form">
             <h2>Check Out Form</h2>
-            {selectedItems.map((item) => (
-              <CheckOutCard checkOutForm={item} />
-            ))}
+            <table>
+              <thead>
+                <tr className="table-heading">
+                  <td>Image</td>
+                  <td>Name</td>
+                  <td>Amount</td>
+                  <td>Total</td>
+                </tr>
+              </thead>
+              <tbody>
+                {selectedItems.map((item) => (
+                  <CheckOutCard checkOutForm={item} />
+                ))}
+              </tbody>
+            </table>
+            <button onClick={proceedHandler}>Proceed To Order</button>
+            {proceed && <div className="approval">Billing Details</div>}
           </div>
         </div>
       )}

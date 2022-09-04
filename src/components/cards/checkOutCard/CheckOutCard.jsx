@@ -3,13 +3,14 @@ import { useEffect } from "react";
 
 import "./CheckOutCard.scss";
 
-const CheckOutCard = ({ checkOutForm }) => {
+const CheckOutCard = ({ checkOutForm, setItemToDelete }) => {
   const [total, setTotal] = useState(0);
-  console.log(checkOutForm);
-  console.log("Opened");
   const changeHandler = (ev) => {
     let totalPrice = ev.target.value * checkOutForm.price;
     setTotal(totalPrice);
+  };
+  const clickHandler = () => {
+    setItemToDelete(checkOutForm.id);
   };
 
   useEffect(() => {
@@ -30,7 +31,7 @@ const CheckOutCard = ({ checkOutForm }) => {
           step="1"
           min="1"
         />
-        <span>Remove</span>
+        <button onClick={clickHandler}>Remove</button>
       </td>
       <td className="amount">{total}</td>
     </tr>

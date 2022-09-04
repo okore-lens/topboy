@@ -17,7 +17,7 @@ function MerchCard(props) {
     props.item(props.id);
     props.clicked(true);
     props.totalAmount(formInput, props.price, props.title);
-    props.checkOut(formInput, props.price, props.title, props.imgSrc);
+    props.checkOut(formInput, props.price, props.title, props.imgSrc, props.id);
   };
 
   return (

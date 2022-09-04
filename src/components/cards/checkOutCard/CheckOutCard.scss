@@ -29,6 +29,12 @@
     input {
       width: 20%;
     }
+    button {
+      margin: 5px;
+      &:hover {
+        background-color: #ff0000;
+      }
+    }
   }
   .amount {
     width: 20%;

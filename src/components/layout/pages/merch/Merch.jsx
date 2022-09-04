@@ -19,9 +19,11 @@ function Merch() {
     price: 0,
     title: "",
     image: null,
+    id: 0,
   });
   const [selectedItems, setSelectedItems] = useState([]);
   const [proceed, setProceed] = useState(false);
+  const [itemToDelete, setItemToDelete] = useState(null);
 
   const clickHandler = () => {
     // console.log("clicked");
@@ -44,18 +46,27 @@ function Merch() {
     }, 3000);
   };
 
-  const checkOutHandler = (number, price, title, image) => {
+  const checkOutHandler = (number, price, title, image, id) => {
     setCheckOutForm({
       number,
       price,
       title,
       image,
+      id,
     });
+  };
+
+  const removeItemHandler = () => {
+    console.log(itemToDelete);
   };
 
   const proceedHandler = () => {
     setProceed(true);
   };
+
+  useEffect(() => {
+    removeItemHandler();
+  }, [itemToDelete]);
 
   useEffect(() => {
     setSelectedItems([...selectedItems, checkOutForm]);
@@ -112,9 +123,15 @@ function Merch() {
                 </tr>
               </thead>
               <tbody>
-                {selectedItems.map((item) => (
-                  <CheckOutCard checkOutForm={item} />
-                ))}
+                {selectedItems.map((item) => {
+                  if (item.image === null) return;
+                  return (
+                    <CheckOutCard
+                      setItemToDelete={setItemToDelete}
+                      checkOutForm={item}
+                    />
+                  );
+                })}
               </tbody>
             </table>
             <button onClick={proceedHandler}>Proceed To Order</button>

@@ -35,6 +35,11 @@
       cursor: pointer;
       margin: 5px;
     }
+    .remove {
+      &:hover {
+        background-color: #ff0000;
+      }
+    }
     button {
       margin: 5px;
       &:hover {
@@ -45,4 +50,8 @@
   .amount {
     width: 20%;
   }
+}
+
+.confirm {
+  background-color: #f7b018d7;
 }

@@ -9,7 +9,6 @@ import CartIcon from "../../../Cart/CartIcon";
 import "./Merch.scss";
 
 function Merch() {
-  const [amount, setAmount] = useState(0);
   const [item, setItem] = useState(null);
   const [clicked, setClicked] = useState(false);
   const [add, setAdd] = useState(false);
@@ -25,6 +24,8 @@ function Merch() {
   const [proceed, setProceed] = useState(false);
   const [itemToDelete, setItemToDelete] = useState(null);
   const [elements, setElements] = useState([]);
+  const [approvedItem, setApprovedItem] = useState({});
+  const [approvedItems, setApprovedItems] = useState([]);
 
   const clickHandler = () => {
     // console.log("clicked");
@@ -58,12 +59,25 @@ function Merch() {
   };
 
   const removeItemHandler = () => {
-    console.log(itemToDelete);
+    // console.log(itemToDelete);
+    // console.log(selectedItems);
+    const index = selectedItems.findIndex((obj) => {
+      return obj.id === itemToDelete;
+    });
+    // console.log(index);
+    selectedItems.splice(index, 1);
   };
 
   const proceedHandler = () => {
+    console.log(approvedItems);
     setProceed(true);
   };
+
+  useEffect(() => {
+    if (approvedItem.title === "") return;
+    setApprovedItems([...approvedItems, approvedItem]);
+    // console.log(approvedItems);
+  }, [approvedItem]);
 
   useEffect(() => {
     removeItemHandler();
@@ -75,7 +89,6 @@ function Merch() {
 
   useEffect(() => {
     setElements([...elements, item]);
-    setAmount(elements.length);
   }, [item]);
 
   // console.log(prev, item);
@@ -89,7 +102,7 @@ function Merch() {
             <CartIcon />
           </span>
           <span>Cart</span>
-          <span className="badge">{amount}</span>
+          <span className="badge">{selectedItems.length - 1}</span>
         </button>
         <div className="content">
           {add && <div className="status">{status}</div>}
@@ -136,13 +149,29 @@ function Merch() {
                     <CheckOutCard
                       setItemToDelete={setItemToDelete}
                       checkOutForm={item}
+                      approvedItems={setApprovedItem}
                     />
                   );
                 })}
               </tbody>
             </table>
             <button onClick={proceedHandler}>Proceed To Order</button>
-            {proceed && <div className="approval">Billing Details</div>}
+            <div className="approval">
+              <p>The following will be sent to TopBoy Whatsapp Number:</p>
+              {proceed &&
+                approvedItems.map((item) => {
+                  if (Object.keys(item).length === 0) return;
+
+                  return (
+                    <li key={item.id}>
+                      <span>{item.number}</span>
+                      <span>{item.title}</span>
+                      <span>{item.size}</span>
+                      <span>{item.color}</span>
+                    </li>
+                  );
+                })}
+            </div>
           </div>
         </div>
       )}

@@ -145,9 +145,14 @@
       }
     }
     .approval {
+      text-align: start;
       width: 80%;
       background-color: #2c0d00;
+      color: #ffff;
       margin: 10px auto;
+      span {
+        margin: 2px;
+      }
     }
   }
 }

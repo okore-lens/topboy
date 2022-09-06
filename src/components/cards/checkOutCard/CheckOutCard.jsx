@@ -3,12 +3,16 @@ import { useEffect } from "react";
 
 import "./CheckOutCard.scss";
 
-const CheckOutCard = ({ checkOutForm, setItemToDelete }) => {
+const CheckOutCard = ({ checkOutForm, setItemToDelete, approvedItems }) => {
   const [total, setTotal] = useState(0);
-  const [selectColor, setSelectColor] = useState("Color");
-  const [selectSize, setSelectSize] = useState("Size");
+  const [selectColor, setSelectColor] = useState("Yellow");
+  const [selectSize, setSelectSize] = useState("small");
+  const [number, setNumber] = useState(1);
+  const [confirmed, setConfirmed] = useState(false);
+  const [text, setText] = useState("COnfirm");
 
   const changeHandler = (ev) => {
+    setNumber(ev.target.value);
     let totalPrice = ev.target.value * checkOutForm.price;
     setTotal(totalPrice);
   };
@@ -20,7 +24,17 @@ const CheckOutCard = ({ checkOutForm, setItemToDelete }) => {
   };
   const clickHandler = () => {
     setItemToDelete(checkOutForm.id);
-    console.log(selectSize, selectColor);
+  };
+
+  const confirmHandler = (ev) => {
+    setConfirmed(!confirmed);
+    approvedItems({
+      number: number,
+      color: selectColor,
+      size: selectSize,
+      title: checkOutForm.title,
+      id: checkOutForm.id,
+    });
   };
 
   useEffect(() => {
@@ -28,7 +42,7 @@ const CheckOutCard = ({ checkOutForm, setItemToDelete }) => {
   }, []);
 
   return (
-    <tr className="CheckOutCard">
+    <tr className={`CheckOutCard  ${confirmed && "confirm"} `}>
       <td className="image">
         <img src={checkOutForm.image} />
       </td>
@@ -55,7 +69,12 @@ const CheckOutCard = ({ checkOutForm, setItemToDelete }) => {
           <option value="xtra-large">Xtra Large</option>
           <option value="variety">Variety</option>
         </select>
-        <button onClick={clickHandler}>Remove</button>
+        <button onClick={clickHandler} className="remove">
+          Remove
+        </button>
+        <button onClick={confirmHandler}>
+          {confirmed ? "Unconfirm" : "Confirm"}
+        </button>
       </td>
       <td className="amount">{total}</td>
     </tr>

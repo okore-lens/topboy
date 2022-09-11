@@ -32,7 +32,6 @@ const AudioCard = (props) => {
   };
 
   const [playing, toggle] = useAudio(props.url);
-
   return (
     <div className="AudioCard">
       <div className="text">

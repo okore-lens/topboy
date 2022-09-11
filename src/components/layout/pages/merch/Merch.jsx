@@ -59,7 +59,6 @@ function Merch() {
     const index = selectedItems.findIndex((obj) => {
       return obj.id === itemToDelete;
     });
-
     selectedItems.splice(index, 1);
   };
 

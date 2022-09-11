@@ -1,25 +1,29 @@
 .NationCard {
-  margin-top: 30px;
-  margin-left: 30px;
-  width: 500px;
-  height: 400px;
-  background-color: #31210a;
-  float: left;
-  border-top: 5px solid #1111115d;
-  border-left: 3px solid #1111115d;
-  border-right: 3px solid #1111115d;
-  border-bottom: 5px solid #1111115d;
+  height: 250px;
+  // background-color: #857969;
+  background-color: #e8ba1a;
+  box-shadow: 0 0 10px 2px #858883;
+  border-radius: 8px;
+
   img {
-    height: 75%;
+    height: 100%;
+    float: right;
   }
 
-  .media-links {
-    font-size: 24px;
-    .icon {
-      color: #ffffff;
-      margin: 12px;
-      &:hover {
-        color: #f5dc52;
+  .left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .media-links {
+      font-size: 24px;
+      .icon {
+        color: #ffffff;
+        margin: 12px;
+        &:hover {
+          color: #f5dc52;
+        }
       }
     }
   }

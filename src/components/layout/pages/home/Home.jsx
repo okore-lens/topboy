@@ -12,13 +12,16 @@ function Home() {
   return (
     <div className="Home">
       <div className="hero">
-        <div className="hero-img">
-          <img src={logo} />
+        <div className="hero-nation">
+          <NationHome />
         </div>
-        <BrandsHome />
+        <div className="hero-brands">
+          <div className="hero-img">
+            <img src={logo} />
+          </div>
+          <BrandsHome />
+        </div>
       </div>
-      <h2>TopBoy Members</h2>
-      <NationHome />
       <h2>WHO ARE WE ?</h2>
       <AboutHome />
       <ServiceHome />

@@ -6,24 +6,9 @@ const NationHome = () => {
   console.log(arr);
   return (
     <div className="nation">
-      <div className="nation-item">
-        {nationList.map((nation) => (
-          <NationCard
-            key={nation.id}
-            name={nation.name}
-            imgSrc={nation.imgSrc}
-          />
-        ))}
-      </div>
-      <div className="nation-item-duplicate">
-        {nationList.map((nation) => (
-          <NationCard
-            key={nation.id}
-            name={nation.name}
-            imgSrc={nation.imgSrc}
-          />
-        ))}
-      </div>
+      {nationList.map((nation) => (
+        <NationCard key={nation.id} name={nation.name} imgSrc={nation.imgSrc} />
+      ))}
     </div>
   );
 };

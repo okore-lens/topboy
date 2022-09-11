@@ -12,23 +12,23 @@ import "./NationCard.scss";
 function NationCard(props) {
   return (
     <div className="NationCard">
-      <h3>{props.name}</h3>
-
       <img src={props.imgSrc} alt="nation image" />
-
-      <div className="media-links">
-        <a href="#">
-          <FontAwesomeIcon className="icon" icon={faFacebook} />
-        </a>
-        <a href="https://twitter.com/deejayronnieXL" target="_blank">
-          <FontAwesomeIcon className="icon" icon={faTwitter} />
-        </a>
-        <a href="https://www.instagram.com/deejayronnie_xl/" target="_blank">
-          <FontAwesomeIcon className="icon" icon={faInstagram} />
-        </a>
-        <a href="https://www.mixcloud.com/ronnie-griffins/" target="_blank">
-          <FontAwesomeIcon className="icon" icon={faMixcloud} />
-        </a>
+      <div className="left">
+        <h3>{props.name}</h3>
+        <div className="media-links">
+          <a href="#">
+            <FontAwesomeIcon className="icon" icon={faFacebook} />
+          </a>
+          <a href="https://twitter.com/deejayronnieXL" target="_blank">
+            <FontAwesomeIcon className="icon" icon={faTwitter} />
+          </a>
+          <a href="https://www.instagram.com/deejayronnie_xl/" target="_blank">
+            <FontAwesomeIcon className="icon" icon={faInstagram} />
+          </a>
+          <a href="https://www.mixcloud.com/ronnie-griffins/" target="_blank">
+            <FontAwesomeIcon className="icon" icon={faMixcloud} />
+          </a>
+        </div>
       </div>
     </div>
   );

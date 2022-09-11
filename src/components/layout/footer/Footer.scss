@@ -1,0 +1,35 @@
+.Footer {
+  color: #000000;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 14px;
+  // height: 116px;
+  padding: 5px;
+  p {
+    margin: 5px 0;
+    .text-link {
+      margin: 0 6px;
+    }
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  hr {
+    width: 75%;
+    margin: auto;
+  }
+
+  .media-links {
+    font-size: 20px;
+    .icon {
+      color: #000000;
+      margin: 0 12px;
+      &:hover {
+        color: #f5dc52;
+      }
+    }
+  }
+}

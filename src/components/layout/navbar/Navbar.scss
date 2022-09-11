@@ -1,0 +1,56 @@
+.Navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  .active {
+    background-color: #462d09e3;
+    transition: background-color 2s ease-in-out;
+  }
+
+  .container {
+    background-color: none;
+    transition: background-color 1.5s linear;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100px;
+    line-height: 100px;
+    width: 85%;
+    display: flex;
+    text-align: start;
+    .left {
+      width: 45%;
+      height: 30px;
+
+      .image {
+        a {
+          text-decoration: none;
+          // padding: none;
+          top: 0;
+          height: 100px;
+          width: 100px;
+          display: flex;
+          align-items: center;
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+    .right {
+      width: 55%;
+      display: flex;
+      justify-content: space-around;
+      .nav-links {
+        a {
+          font-size: 20px;
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.Contact {
+  width: 100%;
+  height: 806px;
+  background-image: url("../../../../assets/images/contact-bg.png");
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 60px;
+  //   margin: 100px auto;
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #0000007a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form-bg {
+      width: 733px;
+      height: 742px;
+      background-color: #0000004b;
+      position: relative;
+      form {
+        width: 436px;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        div {
+          margin: 43px;
+          font-size: 18px;
+          input {
+            width: 100%;
+            height: 56px;
+            border-radius: 10px;
+            border: none;
+            &:focus {
+              outline: none;
+            }
+          }
+          textarea {
+            font-size: 14px;
+            padding: 10px;
+            height: 212px;
+            width: 100%;
+            border-radius: 10px;
+            &:focus {
+              outline: none;
+            }
+          }
+          button {
+            font-weight: bold;
+            font-size: 20px;
+            color: #ffffff;
+            background-color: #87560c;
+            border: none;
+            border-radius: 13px;
+            width: 100%;
+            height: 56px;
+            &:hover {
+              cursor: pointer;
+              background-color: #dbb327;
+            }
+          }
+        }
+      }
+    }
+  }
+}

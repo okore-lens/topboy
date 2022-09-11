@@ -1,0 +1,36 @@
+.ServiceCard {
+  max-width: 90%;
+  height: 305px;
+  background-color: #d9d9d98b;
+  border-radius: 10px;
+  margin: 0 9px;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  transition: 2s ease-in-out;
+  .wrapper {
+    flex-direction: column;
+    .arrow {
+      display: none;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    // background-color: #cea1a1;
+    background-color: #5e3c0b;
+    .wrapper {
+      .arrow {
+        transform: scale(1.1);
+        // trans
+        display: block;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1560px) {
+  .ServiceCard {
+    width: 100%;
+  }
+}

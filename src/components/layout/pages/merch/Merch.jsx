@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import merchList from "../../../../assets/arrays/merchArray";
 import CartContext from "../../../../context/cartContext";
 import MerchCard from "../../../cards/merchCard/MerchCard";
+import Cart from "../../../Cart/Cart";
 import CartIcon from "../../../Cart/CartIcon";
 
 import "./Merch.scss";
@@ -57,8 +58,9 @@ function Merch() {
       </div>
       {clicked && (
         <div>
-          <div onClick={modalHandler} className="check-out">
-            Form Goes Here
+          <div onClick={modalHandler} className="blur"></div>
+          <div className="check-out">
+            <Cart></Cart>
           </div>
         </div>
       )}

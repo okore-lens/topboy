@@ -77,7 +77,7 @@
       }
       .merch-row {
         margin: 0 auto;
-        background-color: #a8969681;
+        // background-color: #a8969681;
         box-shadow: 0 0 10px 10px #323232;
         height: 100%;
         width: 100%;
@@ -95,7 +95,7 @@
       }
     }
   }
-  .check-out {
+  .blur {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -107,9 +107,8 @@
     align-items: center;
     justify-content: center;
   }
-  .form {
+  .check-out {
     width: 60%;
-    height: 80%;
     background-color: #aea8a6;
     border-radius: 5px;
     position: absolute;
@@ -120,40 +119,5 @@
     color: #000;
     padding: 10px;
     overflow: scroll;
-    table {
-      width: 100%;
-      .table-heading {
-        background-color: #c9a72a;
-        td {
-          font-size: 20px;
-          // border: 1px solid #ddd;
-          padding: 8px;
-        }
-      }
-    }
-    button {
-      margin-top: 10px;
-      border: none;
-      border-radius: 5px;
-      width: 40%;
-      height: 30px;
-      font-size: 20px;
-      cursor: pointer;
-      &:hover {
-        background-color: #e75c20;
-        color: rgb(255, 255, 255);
-      }
-    }
-    .approval {
-      text-align: start;
-      width: 80%;
-      background-color: #2c0d00;
-      color: #ffff;
-      margin: 10px auto;
-      list-style: lower-latin;
-      span {
-        margin: 2px;
-      }
-    }
   }
 }

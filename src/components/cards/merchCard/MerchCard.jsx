@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
+import { useContext } from "react";
+import CartContext from "../../../context/cartContext";
 
 import "./MerchCard.scss";
 
@@ -9,15 +10,19 @@ function MerchCard(props) {
     setFormInput(ev.target.value);
   };
 
-  const submitHandler = (ev) => {
+  // addContext
+  const cartCtx = useContext(CartContext);
+
+  const addHandler = (ev) => {
     ev.preventDefault();
-    // elementsArray.find(checkElement);
-    let array = props.elements;
-    if (array.includes(props.id)) return;
-    props.item(props.id);
-    props.clicked(true);
-    props.totalAmount(formInput, props.price, props.title);
-    props.checkOut(formInput, props.price, props.title, props.imgSrc, props.id);
+    const item = {
+      id: props.id,
+      title: props.title,
+      amount: formInput,
+      price: props.price,
+    };
+    cartCtx.addItem(item);
+    console.log(item);
   };
 
   return (
@@ -26,16 +31,16 @@ function MerchCard(props) {
       <div className="image">
         <img src={props.imgSrc} />
       </div>
-      <form className="cartfunc" onSubmit={submitHandler}>
+      <form className="cartfunc">
         <p>KShs. {props.price}</p>
-        {/* <input
+        <input
           value={formInput}
           onChange={changeHandler}
           type="number"
           min="1"
           step="1"
-        /> */}
-        <button>Add to Cart</button>
+        />
+        <button onClick={addHandler}>Add to Cart</button>
       </form>
     </div>
   );

@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.scss";
 import Footer from "./components/layout/footer/Footer";
 import Navbar from "./components/layout/navbar/Navbar";
 import Contact from "./components/layout/pages/contact/Contact";
@@ -8,10 +7,11 @@ import Events from "./components/layout/pages/events/Events";
 import Home from "./components/layout/pages/home/Home";
 import Merch from "./components/layout/pages/merch/Merch";
 import Services from "./components/layout/pages/services/Services";
+import CartProvider from "./context/cartProvider";
 
 function App() {
   return (
-    <div className="App">
+    <CartProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,7 +22,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-    </div>
+    </CartProvider>
   );
 }
 

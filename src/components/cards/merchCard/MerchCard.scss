@@ -21,7 +21,12 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 100%;
+    width: 90%;
+    justify-content: space-around;
+
+    input {
+      width: 25px;
+    }
 
     button {
       background-color: #94651a;

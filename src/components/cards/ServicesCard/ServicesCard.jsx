@@ -1,5 +1,5 @@
 import React from "react";
-import ServicesImgCard from "../servicesImgCard/ServicesImgCard";
+import ServicesImgCard from "./servicesImgCard/ServicesImgCard";
 import imagelist from "../../../assets/arrays/memoryArray";
 
 import "./ServicesCard.scss";

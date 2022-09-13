@@ -3,7 +3,6 @@ import nationList from "../../../../../assets/arrays/nationArray";
 
 const NationHome = () => {
   const arr = nationList;
-  console.log(arr);
   return (
     <div className="nation">
       {nationList.map((nation) => (

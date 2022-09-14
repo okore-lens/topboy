@@ -16,12 +16,6 @@ function VideoCard(props) {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-      {/* <div className="wrapper">
-        <h3>TopBoy Nation Afro Chill Vibes VOL 1</h3>
-        <div className="center">
-          <FontAwesomeIcon icon={faPlay} className="icon" />
-        </div>
-      </div> */}
     </div>
   );
 }

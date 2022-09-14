@@ -128,20 +128,62 @@
     width: 60%;
     margin: 30px auto;
     height: 700px;
+    position: relative;
     .twitter {
       width: 40%;
       height: 100%;
       overflow: scroll;
     }
     .poster {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
       float: right;
       width: 600px;
-      border-radius: 0;
+      height: 650px;
+      position: relative;
+      display: flex;
       img {
+        border-radius: 50px;
         width: 100%;
         height: 100%;
       }
+      .bar {
+        position: absolute;
+        display: flex;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -95%);
+        width: 80%;
+        .count {
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translate(-50%, -95%);
+        }
+        .barItems {
+          width: 100%;
+          height: 6px;
+          margin: 3px;
+          background-color: #ffffff;
+          border-radius: 5px;
+        }
+        .active {
+          background-color: #ffc800;
+        }
+      }
     }
+  }
+
+  .mixes {
+    width: 70%;
+    margin: 20px auto;
+    overflow: scroll;
+    height: 320px;
+    border-top: 3px solid #ffffff6b;
+    border-bottom: 3px solid #ffffff6b;
+    display: flex;
+    align-items: center;
   }
 
   .youtube {

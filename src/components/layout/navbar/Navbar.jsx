@@ -22,7 +22,6 @@ function Navbar() {
     changeBackground();
     window.addEventListener("scroll", changeBackground);
   });
-
   const navLinks = (
     <ul>
       <li>

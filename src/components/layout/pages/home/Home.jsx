@@ -13,6 +13,7 @@ import { Timeline } from "react-twitter-widgets";
 import "./Home.scss";
 import { useState } from "react";
 import { useEffect } from "react";
+import imagelist from "../../../../assets/arrays/memoryArray";
 
 function Home() {
   const [poster, setPoster] = useState(0);
@@ -42,6 +43,7 @@ function Home() {
   useEffect(() => {
     interval();
     barHandler();
+    console.log(imagelist);
   }, []);
   return (
     <div className="Home">
@@ -84,13 +86,36 @@ function Home() {
       </div>
       <h2>Recently Dropped Mixes</h2>
       <div className="mixes">
-        <HomeMixesCard />
-        <HomeMixesCard />
-        <HomeMixesCard />
-        <HomeMixesCard />
-        <HomeMixesCard />
-        <HomeMixesCard />
-        <HomeMixesCard />
+        <div className="slideshow">
+          <img src={img} />
+          <img src={img3} />
+          <img src={img2} />
+          <img src={img3} />
+          {/* {imagelist.map((img) => {
+            <HomeMixesCard key={img.id} src={img.src} />;
+          })} */}
+          {/* <div className="slides">
+            <HomeMixesCard />
+          </div>
+          <div className="slides">
+            <HomeMixesCard />
+          </div>
+          <div className="slides">
+            <HomeMixesCard />
+          </div>
+          <div className="slides">
+            <HomeMixesCard />
+          </div>
+          <div className="slides">
+            <HomeMixesCard />
+          </div>
+          <div className="slides">
+            <HomeMixesCard />
+          </div>
+          <div className="slides">
+            <HomeMixesCard />
+          </div> */}
+        </div>
       </div>
       <div className="youtube">
         <iframe

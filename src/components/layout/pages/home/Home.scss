@@ -178,12 +178,22 @@
   .mixes {
     width: 70%;
     margin: 20px auto;
-    overflow: scroll;
+    overflow: hidden;
     height: 320px;
-    border-top: 3px solid #ffffff6b;
-    border-bottom: 3px solid #ffffff6b;
-    display: flex;
-    align-items: center;
+    // background-color: #50492f;
+    // border-top: 3px solid #ffffff6b;
+    // border-bottom: 3px solid #ffffff6b;
+    // display: flex;
+    // align-items: center;
+    .slideshow {
+      background-color: #e8ba1a;
+      width: 25%;
+      display: flex;
+      img {
+        animation: slide 16s infinite;
+        width: 100%;
+      }
+    }
   }
 
   .youtube {
@@ -281,6 +291,34 @@
     }
   }
 }
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300);
+  }
+}
+
 @keyframes rotation {
   from {
     transform: rotateY(0deg);

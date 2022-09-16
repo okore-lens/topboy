@@ -49,34 +49,36 @@ function Events() {
     return x;
   };
   return (
-    <div className="Events">
-      <h2>UPCOMING EVENTS</h2>
+    <div className="Events-wrapper">
+      <div className="Events">
+        <h2>UPCOMING EVENTS</h2>
 
-      {events.map((event) => (
-        <div key={event.id} className="event">
-          <EventCard
-            day={event.day}
-            month={event.month}
-            location={event.location}
-            venueName={event.name}
-          />
-        </div>
-      ))}
-      <h2>MEMORIES</h2>
-      <div className="image-section">
-        {imagelist.map((img) => (
-          <div
-            className={`image-container w-${randomWidth()} h-${randomLength()}`}
-            key={img.id}
-          >
-            <div className="image-item">
-              <div className="image">
-                <img src={img.src} />
-              </div>
-              <div className="text">{img.text}</div>
-            </div>
+        {events.map((event) => (
+          <div key={event.id} className="event">
+            <EventCard
+              day={event.day}
+              month={event.month}
+              location={event.location}
+              venueName={event.name}
+            />
           </div>
         ))}
+        <h2>MEMORIES</h2>
+        <div className="image-section">
+          {imagelist.map((img) => (
+            <div
+              className={`image-container w-${randomWidth()} h-${randomLength()}`}
+              key={img.id}
+            >
+              <div className="image-item">
+                <div className="image">
+                  <img src={img.src} />
+                </div>
+                <div className="text">{img.text}</div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

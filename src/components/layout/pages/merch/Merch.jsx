@@ -9,6 +9,8 @@ import "./Merch.scss";
 
 function Merch() {
   const [clicked, setClicked] = useState(false);
+  const [status, setStatus] = useState(false);
+  const [statusText, setStatusText] = useState(null);
 
   // Cart Context
   const cartCtx = useContext(CartContext);
@@ -27,7 +29,13 @@ function Merch() {
     setClicked(false);
   };
 
-  let totalAmount;
+  const statusHandler = (item) => {
+    setStatusText(`${item.title} has been added to the cart!!!`);
+    setStatus(true);
+    setTimeout(() => {
+      setStatus(false);
+    }, 3000);
+  };
 
   return (
     <div className="Merch">
@@ -41,6 +49,7 @@ function Merch() {
           <span className="badge">{numberOfCartItems}</span>
         </button>
         <div className="content">
+          {status && <div className="status">{statusText}</div>}
           <div className="merch-row">
             <div className="wrapper">
               {merchList.map((merch) => (
@@ -50,6 +59,7 @@ function Merch() {
                   title={merch.title}
                   imgSrc={merch.imgSrc}
                   price={merch.price}
+                  setStatus={statusHandler}
                 />
               ))}
             </div>

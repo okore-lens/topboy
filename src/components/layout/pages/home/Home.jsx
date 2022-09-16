@@ -40,10 +40,6 @@ function Home() {
 
   let counter = poster + 1;
 
-  const barHandler = () => {
-    let length = imgArray.length;
-  };
-
   const mouseHandler = (index) => {
     console.log(index + 1);
     setPoster(index);
@@ -52,7 +48,6 @@ function Home() {
 
   useEffect(() => {
     interval();
-    barHandler();
     console.log(imagelist);
   }, []);
   return (

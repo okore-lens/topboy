@@ -1,16 +1,20 @@
-.Discography {
-  width: 85%;
-  margin: 100px auto 0 auto;
-  text-align: start;
-  h2 {
-    color: #e8bb1acc;
-  }
-  .audio {
-    color: #dbb427e5;
-    text-align: center;
-  }
-  .video {
-    color: #dbb427e5;
-    text-align: center;
+.Discography-wrapper {
+  background-color: #ce84167a;
+  padding-top: 100px;
+  .Discography {
+    width: 85%;
+    margin: 0 auto;
+    text-align: start;
+    h2 {
+      color: #e8bb1acc;
+    }
+    .audio {
+      color: #dbb427e5;
+      text-align: center;
+    }
+    .video {
+      color: #dbb427e5;
+      text-align: center;
+    }
   }
 }

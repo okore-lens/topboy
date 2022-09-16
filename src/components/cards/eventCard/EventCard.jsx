@@ -24,7 +24,7 @@ function EventCard(props) {
             <a href="#">
               <img src={iconLocation} />
               <h4>{props.location}</h4>
-            </a>{" "}
+            </a>
             <a href="#">
               <img src={iconShare} />
               <h4>Share</h4>

@@ -17,6 +17,7 @@ function MerchCard(props) {
       price: props.price,
     };
     cartCtx.addItem(item);
+    props.setStatus(item);
   };
 
   return (
@@ -25,10 +26,10 @@ function MerchCard(props) {
       <div className="image">
         <img src={props.imgSrc} />
       </div>
-      <form className="cartfunc">
+      <div className="cartfunc">
         <p>KShs. {props.price}</p>
         <button onClick={addHandler}>Add to Cart</button>
-      </form>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 .EventCard {
   width: 60%;
-  // width: 1371px;
   height: 350px;
   background-color: #5c3d14b2;
   margin: 30px auto;
@@ -18,8 +17,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       .poster {
-        width: 100%;
-        height: 100%;
+        width: 98%;
+        height: 98%;
         img {
           width: 100%;
         }

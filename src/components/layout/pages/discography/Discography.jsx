@@ -42,50 +42,53 @@ function Discography() {
   }, []);
 
   return (
-    <div className="Discography">
-      <h2>DISCOGRAPHY</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna ali.orem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali.
-        orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna ali.orem ipsum dolor sit
-        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna ali et, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna ali incididunt ut
-        labore et dolore magna ali. orem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna ali.orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna ali et, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna ali
-      </p>
+    <div className="Discography-wrapper">
+      <div className="Discography">
+        <h2>DISCOGRAPHY</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna ali.orem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna ali. orem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna ali.orem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna ali et, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna ali incididunt ut labore et
+          dolore magna ali. orem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          ali.orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna ali et,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna ali
+        </p>
 
-      <div className="audio">
-        <h3>AUDIO MIXES</h3>
-        {audiolist.map((audio) => (
-          <AudioCard
-            key={audio.id}
-            url={audio.url}
-            title={audio.title}
-            link={audio.link}
-          />
-        ))}
-      </div>
-      <div className="video">
-        <h3>VIDEO MIXES</h3>
-        {videos.map((video) => (
-          <VideoCard key={video.id} src={video.src} />
-        ))}
+        <div className="audio">
+          <h3>AUDIO MIXES</h3>
+          {audiolist.map((audio) => (
+            <AudioCard
+              key={audio.id}
+              url={audio.url}
+              title={audio.title}
+              link={audio.link}
+            />
+          ))}
+        </div>
+        <div className="video">
+          <h3>VIDEO MIXES</h3>
+          {videos.map((video) => (
+            <VideoCard key={video.id} src={video.src} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -7,6 +7,10 @@ import HomeMixesCard from "../../../cards/homeMixesCard/HomeMixesCard";
 import img from "../../../../assets/images/about-img.png";
 import img2 from "../../../../assets/images/hoody.png";
 import img3 from "../../../../assets/images/nation.png";
+import img4 from "../../../../assets/images/cap.png";
+import img5 from "../../../../assets/images/sticker.png";
+import img6 from "../../../../assets/images/t-shirt.png";
+import img7 from "../../../../assets/images/topboy-logo.png";
 
 import { Timeline } from "react-twitter-widgets";
 
@@ -17,7 +21,7 @@ import imagelist from "../../../../assets/arrays/memoryArray";
 
 function Home() {
   const [poster, setPoster] = useState(0);
-  const imgArray = [img, img2, img3];
+  const imgArray = [img, img2, img3, img4, img5, img6, img7];
 
   const interval = () => {
     let count = poster;
@@ -34,10 +38,16 @@ function Home() {
     }, 3000);
   };
 
-  const counter = poster + 1;
+  let counter = poster + 1;
 
   const barHandler = () => {
     let length = imgArray.length;
+  };
+
+  const mouseHandler = (index) => {
+    console.log(index + 1);
+    setPoster(index);
+    counter = index + 1;
   };
 
   useEffect(() => {
@@ -65,6 +75,7 @@ function Home() {
             <span className="count">{counter}</span>
             {imgArray.map((item, index) => (
               <div
+                onClick={mouseHandler.bind(null, index)}
                 key={index}
                 className={`barItems ${counter === index + 1 ? "active" : ""} `}
               ></div>
@@ -86,35 +97,26 @@ function Home() {
       </div>
       <h2>Recently Dropped Mixes</h2>
       <div className="mixes">
-        <div className="slideshow">
-          <img src={img} />
-          <img src={img3} />
-          <img src={img2} />
-          <img src={img3} />
-          {/* {imagelist.map((img) => {
-            <HomeMixesCard key={img.id} src={img.src} />;
-          })} */}
-          {/* <div className="slides">
-            <HomeMixesCard />
-          </div>
-          <div className="slides">
-            <HomeMixesCard />
-          </div>
-          <div className="slides">
-            <HomeMixesCard />
-          </div>
-          <div className="slides">
-            <HomeMixesCard />
-          </div>
-          <div className="slides">
-            <HomeMixesCard />
-          </div>
-          <div className="slides">
-            <HomeMixesCard />
-          </div>
-          <div className="slides">
-            <HomeMixesCard />
-          </div> */}
+        <div className="slides">
+          <HomeMixesCard />
+        </div>
+        <div className="slides">
+          <HomeMixesCard />
+        </div>
+        <div className="slides">
+          <HomeMixesCard />
+        </div>
+        <div className="slides">
+          <HomeMixesCard />
+        </div>
+        <div className="slides">
+          <HomeMixesCard />
+        </div>
+        <div className="slides">
+          <HomeMixesCard />
+        </div>
+        <div className="slides">
+          <HomeMixesCard />
         </div>
       </div>
       <div className="youtube">

@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../../assets/images/poster-img.png";
+import image from "../../../assets/images/about-img.png";
 import iconLocation from "../../../assets/images/icon-location.png";
 import iconShare from "../../../assets/images/icon-share.png";
 

@@ -4,7 +4,7 @@ import imagelist from "../../../assets/arrays/memoryArray";
 
 import "./ServicesCard.scss";
 
-function ServicesCard(props) {
+function ServiceCard(props) {
   return (
     <div className="ServicesCard">
       <h3>{props.title}</h3>
@@ -20,4 +20,4 @@ function ServicesCard(props) {
   );
 }
 
-export default ServicesCard;
+export default ServiceCard;

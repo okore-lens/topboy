@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ServicesCard from "../../../cards/ServicesCard/ServicesCard";
+import ServiceCard from "../../../cards/ServiceCard/ServiceCard";
 
 import "./Services.scss";
 
@@ -38,10 +38,7 @@ function Services() {
       <h3>SERVICES WE OFFER</h3>
       {services.map((service) => (
         <div key={service.id} id={`${service.id}`}>
-          <ServicesCard
-            title={service.name}
-            description={service.description}
-          />
+          <ServiceCard title={service.name} description={service.description} />
         </div>
       ))}
     </div>

@@ -1,13 +1,12 @@
 .ServicesCard {
-  // width: 1660px;
   width: 70%;
-  // height: 750px;
-  background-color: #524026;
-  color: #000000;
+  background-color: #ff950196;
   margin: 30px auto;
   border-radius: 30px;
   padding: 20px;
-  // transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+  // box-shadow: 0 0 10px 4px #85541b;
+  box-shadow: 0 0 10px 5px #dd8100;
 
   h3 {
     color: #000000;
@@ -43,13 +42,6 @@
       }
     }
   }
-  // &:hover {
-  //   // box-shadow: 0 0 10px 5px #dd8100;
-  //   // -webkit-box-shadow: 0 0 10px 5px #dd8100;
-  //   // -moz-box-shadow: 0 0 10px 5px #dd8100;
-  //   cursor: pointer;
-  //   // transform: scale(1.1);
-  // }
 }
 
 @media screen and (max-width: 1560px) {

@@ -28,10 +28,10 @@ function Navbar() {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/services">Services</Link>
+        <Link to="/events">Events</Link>
       </li>
       <li>
-        <Link to="/events">Events</Link>
+        <Link to="/services">Services</Link>
       </li>
       <li>
         <Link to="/discography">Discography</Link>
@@ -68,10 +68,10 @@ function Navbar() {
             <Link to="/">Home</Link>
           </span>
           <span className="nav-links">
-            <Link to="/services">Services</Link>
+            <Link to="/events">Events</Link>
           </span>
           <span className="nav-links">
-            <Link to="/events">Events</Link>
+            <Link to="/services">Services</Link>
           </span>
           <span className="nav-links">
             <Link to="/discography">Discography</Link>

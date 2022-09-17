@@ -1,15 +1,25 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { useContext } from "react";
 import CartContext from "../../../context/cartContext";
 
 import "./MerchCard.scss";
 
 function MerchCard(props) {
+  const [showButtons, setShowButtons] = useState({
+    itemButtons: false,
+    addCart: true,
+  });
+  const [count, setCount] = useState(0);
+
   // addContext
   const cartCtx = useContext(CartContext);
 
-  const addHandler = (ev) => {
-    ev.preventDefault();
+  const addHandler = () => {
+    setShowButtons({
+      itemButtons: true,
+      addCart: false,
+    });
     const item = {
       id: props.id,
       title: props.title,
@@ -18,7 +28,32 @@ function MerchCard(props) {
     };
     cartCtx.addItem(item);
     props.setStatus(item);
+    let newCount = count + 1;
+    setCount(newCount);
   };
+
+  const removeHandler = () => {
+    let newCount = count - 1;
+    if (count === 1) {
+      setShowButtons({
+        itemButtons: false,
+        addCart: true,
+      });
+      cartCtx.removeItem(props.id);
+      setCount(newCount);
+      return;
+    }
+    cartCtx.removeItem(props.id);
+    setCount(newCount);
+  };
+
+  // useEffect(() => {
+  //   setShowButtons({
+  //     itemButtons: false,
+  //     addCart: true,
+  //   });
+  //   setCount(0);
+  // }, [cartCtx.clearCart]);
 
   return (
     <div className="MerchCard">
@@ -28,7 +63,16 @@ function MerchCard(props) {
       </div>
       <div className="cartfunc">
         <p>KShs. {props.price}</p>
-        <button onClick={addHandler}>Add to Cart</button>
+        {showButtons.addCart && (
+          <button onClick={addHandler}>Add to Cart</button>
+        )}
+        {showButtons.itemButtons && (
+          <div className="buttons">
+            <button onClick={removeHandler}>- Reduce</button>
+            <span>{count}</span>
+            <button onClick={addHandler}>+ Add</button>
+          </div>
+        )}
       </div>
     </div>
   );

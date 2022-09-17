@@ -1,0 +1,82 @@
+.Cart {
+  h2 {
+    color: #000000;
+  }
+  ul {
+    padding: 10px;
+    background-color: #f0f8ffa2;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 10px #191e22de;
+  }
+  .buttons {
+    margin: 15px;
+    button {
+      background-color: #a35312;
+      width: 200px;
+      border: none;
+      margin: 2px;
+      height: 30px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bolder;
+      &:hover {
+        background-color: #35d320;
+      }
+    }
+    .clear {
+      &:hover {
+        background-color: #ce0000;
+        color: #ffffff;
+      }
+    }
+  }
+  .proceed {
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    min-height: 20px;
+    background-color: #f0f8ffa2;
+    box-shadow: 0 0 10px 10px #191e22de;
+    .preference {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      .order {
+        ul {
+          text-align: start;
+          padding: 4px;
+          li {
+            list-style: circle;
+            margin: 2px;
+            span {
+              margin: 2px;
+            }
+          }
+        }
+      }
+      form {
+        textarea {
+          width: 90%;
+          height: 50px;
+        }
+      }
+    }
+    button {
+      background-color: #a35312;
+      width: 200px;
+      border: none;
+      margin: 15px;
+      height: 30px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bolder;
+      &:hover {
+        background-color: #35d320;
+      }
+    }
+  }
+}

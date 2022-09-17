@@ -47,17 +47,7 @@
         font-weight: bold;
       }
       &:hover {
-        background-color: #2c0d00;
-
-        .badge {
-          background-color: #92320c;
-        }
-      }
-      &:active {
-        background-color: #2c0d00;
-        .badge {
-          background-color: #92320c;
-        }
+        background-color: #dd4504;
       }
     }
 
@@ -119,6 +109,7 @@
     z-index: 3;
     color: #000;
     padding: 10px;
+    height: 80vh;
     overflow: scroll;
   }
 }

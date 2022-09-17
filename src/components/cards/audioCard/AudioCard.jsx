@@ -44,7 +44,6 @@ const AudioCard = (props) => {
           onClick={toggle}
           className="icon"
         />
-        {/* <FontAwesomeIcon icon={faPause} className="icon" /> */}
         <a href={props.link}>
           <FontAwesomeIcon className="icon" icon={faShareAlt} />
         </a>

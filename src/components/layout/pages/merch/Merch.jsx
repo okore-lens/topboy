@@ -19,6 +19,10 @@ function Merch() {
   const numberOfCartItems = items.length;
 
   const clickHandler = () => {
+    if (numberOfCartItems < 1) {
+      alert("Please Select Merch First");
+      return;
+    }
     setClicked(true);
   };
   const modalHandler = () => {
@@ -32,13 +36,6 @@ function Merch() {
       setStatus(false);
     }, 3000);
   };
-
-  useState(() => {
-    console.log("Called");
-    if (numberOfCartItems < 1) {
-      setClicked(false);
-    }
-  }, [items]);
 
   return (
     <div className="Merch">
@@ -73,7 +70,7 @@ function Merch() {
         <div>
           <div onClick={modalHandler} className="blur"></div>
           <div className="check-out">
-            <Cart></Cart>
+            <Cart clearCart={clickHandler}></Cart>
           </div>
         </div>
       )}

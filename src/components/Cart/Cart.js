@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 
 import "./Cart.scss";
 
-const Cart = () => {
+const Cart = (props) => {
   const [clicked, setClicked] = useState(false);
   const [text, setText] = useState(null);
 
@@ -40,8 +40,8 @@ const Cart = () => {
   };
 
   const proceedHandler = () => {
-    setClicked(true);
     const cart = cartCtx.items;
+    if (cart.length < 1) return;
     let list = cart.map((item) => (
       <li key={item.id}>
         <span>{item.amount}</span>
@@ -49,6 +49,7 @@ const Cart = () => {
         <span>{item.price * item.amount}</span>
       </li>
     ));
+    setClicked(true);
     setText(list);
   };
 

@@ -31,7 +31,6 @@ function Discography() {
       let str = vid.src;
       let after = str.replace(/"/g, "");
       vid.src = after;
-      console.log(vid.src);
     });
 
     setVideos(loadedVideos);

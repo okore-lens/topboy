@@ -16,7 +16,6 @@ const Cart = () => {
   };
 
   const addHandler = (item) => {
-    console.log(item.title, item.amount);
     cartCtx.addItem({ ...item, amount: 1 });
   };
 
@@ -43,7 +42,6 @@ const Cart = () => {
   const proceedHandler = () => {
     setClicked(true);
     const cart = cartCtx.items;
-    console.log(cart);
     let list = cart.map((item) => (
       <li key={item.id}>
         <span>{item.amount}</span>

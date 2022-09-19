@@ -2,7 +2,6 @@ li {
   list-style: none;
   .CartItem {
     width: 100%;
-    // background-color: #a15d0fcc;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;

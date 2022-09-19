@@ -41,14 +41,12 @@ function Home() {
   let counter = poster + 1;
 
   const mouseHandler = (index) => {
-    console.log(index + 1);
     setPoster(index);
     counter = index + 1;
   };
 
   useEffect(() => {
     interval();
-    console.log(imagelist);
   }, []);
   return (
     <div className="Home">

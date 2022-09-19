@@ -47,14 +47,6 @@ function MerchCard(props) {
     setCount(newCount);
   };
 
-  // useEffect(() => {
-  //   setShowButtons({
-  //     itemButtons: false,
-  //     addCart: true,
-  //   });
-  //   setCount(0);
-  // }, [cartCtx.clearCart]);
-
   return (
     <div className="MerchCard">
       <h4>{props.title}</h4>

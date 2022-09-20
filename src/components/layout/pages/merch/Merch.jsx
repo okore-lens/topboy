@@ -70,7 +70,7 @@ function Merch() {
         <div>
           <div onClick={modalHandler} className="blur"></div>
           <div className="check-out">
-            <Cart clearCart={clickHandler}></Cart>
+            {numberOfCartItems > 0 && <Cart clearCart={clickHandler}></Cart>}
           </div>
         </div>
       )}

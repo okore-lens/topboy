@@ -109,16 +109,27 @@
       top: 60%;
       left: 98%;
       transform: translate(-98%, -60%);
-      .nation {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-        animation-name: pan;
-        animation-duration: 5s;
-        animation-timing-function: linear;
+      height: 60%;
+      // background-color: #50492f;
+      img {
+        height: 100%;
+        width: 50%;
       }
     }
+  }
+  .nation {
+    // background-color: #50492f;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    // animation-name: pan;
+    // animation-duration: 5s;
+    // animation-timing-function: linear;
   }
 
   .upcoming {

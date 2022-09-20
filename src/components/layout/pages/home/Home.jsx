@@ -52,7 +52,7 @@ function Home() {
     <div className="Home">
       <div className="hero">
         <div className="hero-nation">
-          <NationHome />
+          <img src={img} />
         </div>
         <div className="hero-brands">
           <div className="hero-img">
@@ -61,6 +61,9 @@ function Home() {
           <BrandsHome />
         </div>
       </div>
+
+      <NationHome />
+
       <div className="upcoming">
         <div className="poster">
           <img src={imgArray[poster]} />

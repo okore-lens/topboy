@@ -47,6 +47,8 @@ function MerchCard(props) {
     setCount(newCount);
   };
 
+  useEffect(() => {}, []);
+
   return (
     <div className="MerchCard">
       <h4>{props.title}</h4>

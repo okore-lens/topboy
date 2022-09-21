@@ -44,7 +44,7 @@ function MerchCard(props) {
       return;
     }
     cartCtx.removeItem(props.id);
-    setCount(newCount);
+    setCount(count - 1);
   };
 
   useEffect(() => {

@@ -3,7 +3,7 @@
     color: #e8ba1a;
   }
   .hero {
-    width: 100%;
+    width: 100vw;
     height: 99vh;
     background-image: url(../../../../assets/images/bg.jpg);
     background-position: center center;
@@ -237,5 +237,34 @@
 
   100% {
     left: 0;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .Home {
+    .hero {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      .hero-brands {
+        width: 80%;
+        // margin: 0 auto  ;
+        // height: fit-content;
+        .brands {
+          top: 70%;
+          left: 50%;
+          transform: translate(-50%, -70%);
+          width: 100%;
+        }
+      }
+      .hero-nation {
+        display: none;
+      }
+    }
+    .nation {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

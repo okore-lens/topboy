@@ -22,32 +22,32 @@ function Navbar() {
     changeBackground();
     window.addEventListener("scroll", changeBackground);
   });
+  const clickHandler = () => {
+    console.log(click);
+    setClick(!click);
+  };
   const navLinks = (
     <ul>
-      <li>
+      <li onClick={clickHandler}>
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li onClick={clickHandler}>
         <Link to="/events">Events</Link>
       </li>
-      <li>
+      <li onClick={clickHandler}>
         <Link to="/services">Services</Link>
       </li>
-      <li>
+      <li onClick={clickHandler}>
         <Link to="/discography">Discography</Link>
       </li>
-      <li>
+      <li onClick={clickHandler}>
         <Link to="/merch">Merch</Link>
       </li>
-      <li>
+      <li onClick={clickHandler}>
         <Link to="/contact">Contact Us</Link>
       </li>
     </ul>
   );
-  const clickHandler = () => {
-    console.log(click);
-    setClick(true);
-  };
 
   return (
     <div className={`Navbar `}>

@@ -11,7 +11,7 @@ function EventCard(props) {
       <div className="date">
         <div className="wrapper">
           <div className="poster">
-            <img src={image} />
+            <img src={`http://localhost:8000/images/${props.poster}`} />
           </div>
           <div className="day">{props.day}</div>
           <div className="month">{props.month}</div>

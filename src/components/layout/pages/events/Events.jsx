@@ -6,30 +6,19 @@ import "./Events.scss";
 
 function Events() {
   const [events, setEvents] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   async function fetchEvents() {
-    const response = await fetch(
-      "https://topboy-nation-default-rtdb.europe-west1.firebasedatabase.app/Events.json"
-    );
-
-    if (!response.ok) {
-      throw new Error("Something went wrong");
+    try {
+      setIsLoading(true);
+      const response = await fetch("http://localhost:8000/store/event");
+      const responseData = await response.json();
+      setEvents(responseData.events);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setIsLoading(false);
     }
-
-    const responseData = await response.json();
-
-    const loadedEvents = [];
-
-    for (const key in responseData) {
-      loadedEvents.push({
-        id: key,
-        day: responseData[key].day,
-        location: responseData[key].location,
-        month: responseData[key].month,
-        name: responseData[key].venueName,
-      });
-    }
-    setEvents(loadedEvents);
   }
 
   useEffect(() => {
@@ -56,10 +45,11 @@ function Events() {
         {events.map((event) => (
           <div key={event.id} className="event">
             <EventCard
-              day={event.day}
-              month={event.month}
+              day={event.dayMonth}
+              // month={event.dayMonth}
               location={event.location}
               venueName={event.name}
+              poster={event.poster}
             />
           </div>
         ))}

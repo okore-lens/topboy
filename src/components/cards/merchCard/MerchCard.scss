@@ -38,3 +38,14 @@
     }
   }
 }
+
+@media screen and (min-width: 300px) and (max-width: 560px) {
+  .MerchCard {
+    width: 100%;
+    .cartfunc {
+      button {
+        height: max-content;
+      }
+    }
+  }
+}

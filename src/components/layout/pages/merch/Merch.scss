@@ -113,3 +113,22 @@
     overflow: scroll;
   }
 }
+
+@media screen and (min-width: 300px) and (max-width: 560px) {
+  .Merch {
+    // height: max-content;
+    .wrapper {
+      h2 {
+        // top: 13%;
+      }
+      .cart {
+        top: 15%;
+        transform: translate(-90%, -15%);
+        width: 150px;
+      }
+      .content {
+        margin: 200px 5px;
+      }
+    }
+  }
+}

@@ -65,9 +65,7 @@ function MerchCard(props) {
       </div>
       <div className="cartfunc">
         <p>KShs. {props.price}</p>
-        {showButtons.addCart && (
-          <button onClick={addHandler}>Add to Cart</button>
-        )}
+        {showButtons.addCart && <button onClick={addHandler}>Add</button>}
         {showButtons.itemButtons && (
           <div className="buttons">
             <button onClick={removeHandler}>- Reduce</button>

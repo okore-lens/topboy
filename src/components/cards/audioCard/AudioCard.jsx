@@ -11,25 +11,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./AudioCard.scss";
 
 const AudioCard = (props) => {
-  const useAudio = (url) => {
-    const [audio] = useState(new Audio(url));
-    const [playing, setPlaying] = useState(false);
+    const useAudio = (url) => {
+      const [audio] = useState(new Audio(url));
+      const [playing, setPlaying] = useState(false);
 
-    const toggle = () => setPlaying(!playing);
+      const toggle = () => setPlaying(!playing);
 
-    useEffect(() => {
-      playing ? audio.play() : audio.pause();
-    }, [playing, audio]);
+      useEffect(() => {
+        playing ? audio.play() : audio.pause();
+      }, [playing, audio]);
 
-    useEffect(() => {
-      audio.addEventListener("ended", () => setPlaying(false));
-      return () => {
-        audio.removeEventListener("ended", () => setPlaying(false));
-      };
-    }, [audio]);
+      useEffect(() => {
+        audio.addEventListener("ended", () => setPlaying(false));
+        return () => {
+          audio.removeEventListener("ended", () => setPlaying(false));
+        };
+      }, [audio]);
 
-    return [playing, toggle];
-  };
+      return [playing, toggle];
+    };
 
   const [playing, toggle] = useAudio(props.url);
   return (
